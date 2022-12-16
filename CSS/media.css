@@ -1,0 +1,45 @@
+
+
+@media screen and (max-width: 800px) {
+    .extra-text{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .logo{
+        display: initial;
+    }
+
+    .bars{
+        display: none;
+    }
+
+        
+    .nav-middle{
+        display: initial;
+    }
+    
+    .sundarban{
+        font-size: 70px;
+    letter-spacing: 10px;
+    }
+
+    .header-container{
+        flex-direction: row;
+        padding-top: 100px;
+        justify-content: space-between;
+    align-items: center;
+    }
+    .extra-text{
+        width: 350px;
+    }
+
+    .header-nav{
+        display: initial;
+    }
+
+    .small-nav{
+        display: none;
+    }
+}
