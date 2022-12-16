@@ -62,31 +62,31 @@ previous.onclick = ()=>{
 
 
 
-const bgChange = (action)=>{
-    if(action == "next"){
-        number ++;
-        if (number > imgArr.length) {
-         number = 0 ;
-        }
-    }
-    else{
-        number --;
-        if(number < 0){
-            number = imgArr.length;
-        }
-    }
+// const bgChange = (action)=>{
+//     if(action == "next"){
+//         number ++;
+//         if (number > imgArr.length) {
+//          number = 0 ;
+//         }
+//     }
+//     else{
+//         number --;
+//         if(number < 0){
+//             number = imgArr.length;
+//         }
+//     }
 
-console.log(number);
-header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
+// console.log(number);
+// header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
 
-}
+// }
 
-setInterval(()=>{
-    number ++;
-    if (number > 8) {
-     number = 0 ;
-    }
+// setInterval(()=>{
+//     number ++;
+//     if (number > 8) {
+//      number = 0 ;
+//     }
 
-header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
+// header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
 
-}, 9000);
+// }, 9000);
