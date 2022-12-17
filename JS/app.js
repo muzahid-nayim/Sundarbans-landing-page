@@ -49,8 +49,8 @@ const previous = document.getElementById('prev');
 const next = document.getElementById('next');
 const header = document.querySelector('header');
 const mainPath = "/IMG/";
-const imgArr = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg'];
-let number = 3;
+const imgArr = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg'];
+let number = 4;
 
 next.onclick = ()=>{
 bgChange('next');  
@@ -62,31 +62,33 @@ previous.onclick = ()=>{
 
 
 
-// const bgChange = (action)=>{
-//     if(action == "next"){
-//         number ++;
-//         if (number > imgArr.length) {
-//          number = 0 ;
-//         }
-//     }
-//     else{
-//         number --;
-//         if(number < 0){
-//             number = imgArr.length;
-//         }
-//     }
+const bgChange = (action)=>{
+    if(action == "next"){
+        number ++;
 
-// console.log(number);
-// header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
+        if (number >= imgArr.length) {
+         number = 0 ;
+        }
 
-// }
+    }
+    else{
+        number --;
+        if(number <= 0){
+            number = imgArr.length-1;
+        }
+    }
 
-// setInterval(()=>{
-//     number ++;
-//     if (number > 8) {
-//      number = 0 ;
-//     }
+console.log(number);
+header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
 
-// header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
+}
 
-// }, 9000);
+setInterval(()=>{
+    number ++;
+    if (number >= imgArr.length) {
+     number = 0 ;
+    }
+
+header.style.backgroundImage = `url('${mainPath+imgArr[number]}')`
+
+}, 9000);
